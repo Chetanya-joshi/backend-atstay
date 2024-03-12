@@ -14,7 +14,14 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(express.json());
 const cors = require("cors");
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:5000" , "https://front-task-app.onrender.com" , "https://front-task-app-api.onrender.com"],
+ //  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 
 app.listen(process.env.PORT);
