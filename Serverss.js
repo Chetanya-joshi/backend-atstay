@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 const cors = require("cors");
 const corsOptions = {
-  origin: ["http://localhost:5000" , "https://front-task-app.onrender.com" , "https://front-task-app-api.onrender.com"],
+  origin: ["http://localhost:5000" ,"http://localhost:3000", "https://front-task-app.onrender.com" , "https://front-task-app-api.onrender.com"],
  //  origin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
