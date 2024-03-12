@@ -24,7 +24,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 
-app.listen(process.env.PORT);
+app.listen(5000);
 
 const updatedStatus = {};
 
@@ -185,7 +185,7 @@ app.post("/Order", async (req, resp) => {
 });
 
 app.get("/key", (req, resp) => {
-  resp.json({ key: process.env.RAZOR_AP1_KEY });
+  resp.json({ key: 'rzp_test_OmCfFJhnp3Fztn' });
 });
 
 app.post("/saveDataToDatabase", async (req, resp) => {
